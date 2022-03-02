@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "本地项目(文件)管理工具",
   "main": "index.js",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/linshangchun/cli-item"
+  },
   "bin": {
     "it": "./index.js"
   },
@@ -25,7 +29,6 @@
     "commander": "^9.0.0",
     "dayjs": "^1.10.7",
     "shelljs": "^0.8.5",
-    "uuid": "^8.3.2",
     "yaml": "^1.10.2"
   },
   "devDependencies": {

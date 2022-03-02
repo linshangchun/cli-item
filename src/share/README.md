@@ -20,3 +20,18 @@ share 共享文件夹
 
 - script 公享脚本
 - utils 共享函数
+
+### 依赖库包
+
+系统模块
+
+- path
+- fs
+- os
+
+三方模块
+
+- yaml
+- clipboardy
+- chalk
+- boxen
