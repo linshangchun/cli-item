@@ -132,7 +132,6 @@ cmd
   });
 cmd
   .command("view <alias>")
-  .alias("v")
   .description("【it view <alias>】查看项目详情")
   .action((alias) => {
     const viewItem = getCurItem(alias);
@@ -144,7 +143,7 @@ cmd
 
 cmd
   .command(`list`)
-  .alias("l")
+  .alias("ls")
   .description(`【it list】查看项目列表`)
   .option(`-s, --size <size>`, `展示项目数量`, 6)
   .option(`-a, --all [all]`, `展示所有项目`, false)
@@ -172,7 +171,6 @@ cmd
 
 cmd
   .command(`edit [name]`)
-  .alias("e")
   .description(`【it edit [data|conf]】查看并编辑数据文件`)
   .action((name) => {
     const { editToolCmd } = getItemConf();
@@ -189,7 +187,6 @@ cmd
 
 cmd
   .command(`conf`)
-  .alias("c")
   .description(`【it conf】系统设置`)
   .option(`-e, --editToolCmd <editToolCmd>`, `编辑工具命令`)
   .option(`-o, --openToolCmd <openToolCmd>`, `文件管理器工具命令`)
@@ -207,7 +204,6 @@ cmd
 
 cmd
   .command("open <alias>")
-  .alias("o")
   .description("【it open <alias>】访达系统目录")
   .action((alias) => {
     const { openToolCmd } = getItemConf();
