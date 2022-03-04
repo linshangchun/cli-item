@@ -1,24 +1,18 @@
+## install
+
+npm i cli-item
+
+> npm package: https://www.npmjs.com/package/cli-item
+
 ## description
 
-本地项目(文件)管理工具
-
-## dev-time
-
-```
->git clone xxx/repo-name
->cd repo-name
->yarn
->yarn build
->yarn link
->it or it -h
-```
+cli: 本地项目(文件)管理工具
 
 ## play-time
 
 ```
 安装：
-    >npm i -g @lshch-cli/item
-or  >yarn global add add @lshch-cli/item
+    >npm i cli-item
 
 测试：
     >it
@@ -42,4 +36,4 @@ or  >it edit data(defaule: code open your-all-item-data)
 
 ## publish-time
 
-@lshch-cli/item 【https://registry.npmjs.org】
+cli-item:【https://registry.npmjs.org】

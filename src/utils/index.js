@@ -3,7 +3,7 @@ const fs = require("fs");
 const os = require("os");
 const shareUtils = require("../share/utils");
 
-const STORE_ROOT_DIR = "@lshch-cli/item";
+const STORE_ROOT_DIR = ".cli-item";
 const STORE_DATA_FILENAME = "item.json";
 const STORE_CONF_FILENAME = "item.yml";
 const ITEM_PACKAGE_FILENAME = "package.json";

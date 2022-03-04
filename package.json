@@ -1,7 +1,7 @@
 {
-  "name": "@lshch-cli/cli-item",
+  "name": "cli-item",
   "version": "1.0.0",
-  "description": "本地项目(文件)管理工具",
+  "description": "cli: 本地项目(文件)管理工具",
   "main": "index.js",
   "repository": {
     "type": "github",
@@ -15,8 +15,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "item",
     "it",
+    "cli",
+    "item",
     "file-admin"
   ],
   "files":["package.json","index.js","bin"],
