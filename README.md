@@ -1,9 +1,3 @@
-## install
-
-npm i cli-item
-
-> npm package: https://www.npmjs.com/package/cli-item
-
 ## description
 
 cli: 本地项目(文件)管理工具
@@ -12,7 +6,7 @@ cli: 本地项目(文件)管理工具
 
 ```
 安装：
-    >npm i cli-item
+    >npm install -g cli-item
 
 测试：
     >it
@@ -23,7 +17,7 @@ or  >it -h
 查看项目:
     >it view your-alisa
 编辑项目:
-    >it set your-alisa [-n,-a,-d,-t,-h]
+    >it set your-alisa [-n,-a,-d,-t]
 or  >it edit data(defaule: code open your-all-item-data)
 删除项目:
     >it del your-alisa
@@ -36,4 +30,11 @@ or  >it edit data(defaule: code open your-all-item-data)
 
 ## publish-time
 
-cli-item:【https://registry.npmjs.org】
+- yarn build
+- nrm use npm
+- npm login
+- npm publish
+
+package: [cli-item](https://www.npmjs.com/package/cli-item)
+
+repo: [cli-item](https://github.com/linshangchun/cli-item)

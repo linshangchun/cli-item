@@ -88,7 +88,7 @@ cmd
 
 cmd
   .command(`set <alias>`)
-  .description(`【it set <alias> [-a,-n]】更新项目`)
+  .description(`【it set <alias> [-n,-a,-d,-t]】更新项目`)
   .option(`-n, --name <name>`, `更新项目名称`)
   .option(`-a, --alias <alias>`, `更新项目别称`)
   .option(`-d, --description <description>`, `更新项目描述`)
