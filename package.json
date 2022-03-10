@@ -11,8 +11,8 @@
     "it": "./index.js"
   },
   "scripts": {
-    "build": "rollup -c",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c rollup.dev.config.js",
+    "publish": "npm version patch && rollup -c && npm publish --registry https://registry.npmjs.org"
   },
   "keywords": [
     "it",

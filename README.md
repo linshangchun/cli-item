@@ -1,8 +1,8 @@
-## description
+## Description
 
 cli: 本地项目(文件)管理工具
 
-## play-time
+## Play time
 
 ```
 安装：
@@ -13,14 +13,14 @@ cli: 本地项目(文件)管理工具
 or  >it -h
 添加项目:
     >cd your-folder && it add <alisa>
-    >it your-alisa(defaule: code open your-alisa-path)
+    >it <alisa>
 查看项目:
-    >it view your-alisa
+    >it view <alisa>
 编辑项目:
-    >it set your-alisa [-n,-a,-d,-t]
-or  >it edit data(defaule: code open your-all-item-data)
+    >it set <alisa> [-n,-a,-d,-t]
+or  >it edit data
 删除项目:
-    >it del your-alisa
+    >it del <alisa>
 
 默认说明：
 1、打开项目[it alisa]或编辑所有项目[it edit data]时，默认使用vscode编辑器,也可设置idea或其他编辑器：it conf -e [idea|webstore|other-edit-cmd]
@@ -28,12 +28,7 @@ or  >it edit data(defaule: code open your-all-item-data)
 
 ```
 
-## publish-time
-
-- yarn build
-- nrm use npm
-- npm login
-- npm publish
+## Learn more
 
 package: [cli-item](https://www.npmjs.com/package/cli-item)
 
