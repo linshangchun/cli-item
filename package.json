@@ -1,6 +1,6 @@
 {
   "name": "cli-item",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "cli: 本地项目(文件)管理工具",
   "main": "index.js",
   "repository": {
@@ -20,7 +20,11 @@
     "item",
     "file-admin"
   ],
-  "files":["package.json","index.js","bin"],
+  "files": [
+    "package.json",
+    "index.js",
+    "bin"
+  ],
   "author": "lshch",
   "license": "ISC",
   "dependencies": {
