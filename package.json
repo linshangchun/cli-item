@@ -1,6 +1,6 @@
 {
   "name": "cli-item",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "cli: 本地项目(文件)管理工具",
   "main": "index.js",
   "repository": {
