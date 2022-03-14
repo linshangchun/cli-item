@@ -14,6 +14,7 @@ const {
   activeItem,
   systemLogo,
   systemPkg,
+  newTag,
   itPath,
   itSystem,
 } = require("./utils");
@@ -26,9 +27,7 @@ const getCurItem = (alias, type = "item") => {
   }
   const allData = getItemData();
   if (type === "tag") {
-    const curItemList = allData.filter((i) =>
-      i?.tag?.split(",").includes(alias)
-    );
+    const curItemList = allData.filter((i) => i?.tag?.includes(alias));
     if (!curItemList.length && type === "tag")
       console.log(`it: "not found the tag"`);
     return curItemList;
@@ -106,23 +105,12 @@ cmd
             item.description = opts.description
               ? opts.description
               : item.description;
-            const oldTags = (item.tag || "").split(",");
-            const setTags = (opts.tag || "")
-              .split(",")
-              .filter((i) => Boolean(i) && i !== " ")
-              .map((i) => i.trim());
-            const isOut = (i) => i.lastIndexOf("-") === i.length - 1;
-            const outTags = setTags
-              ?.filter((i) => isOut(i))
-              .map((i) => i.substring(0, i.length - 1)); // 取出要删除的标签
-            const addTags = setTags?.filter((i) => !isOut(i)); // 真正添加的标签
-            const newOldTags = oldTags.filter((i) => !outTags.includes(i)); // 去除原数据中要删除的标签
-            item.tag = [...new Set([...newOldTags, ...addTags])].join(",");
+            item.tag = newTag({ oldTag: item.tag, tag: opts.tag });
             item.updateTime = dayjs().format("YYYY-MM-DD HH:mm:ss");
             console.log(`changed-itemName: ${item.name}`);
             console.log(`changed-itemAlias: ${item.alias}`);
             console.log(`changed-itemDesc: ${item.description}`);
-            console.log(`changed-itemTag: ${item.tag}`);
+            console.log(`changed-itemTag: ${item?.tag?.join(",")}`);
           }
           return item;
         })
