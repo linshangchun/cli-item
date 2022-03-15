@@ -118,6 +118,7 @@ cmd
       return;
     }
   });
+
 cmd
   .command("view <alias>")
   .description("【it view <alias>】查看项目详情")
@@ -133,7 +134,7 @@ cmd
   .command(`list`)
   .alias("ls")
   .description(`【it list】查看项目列表`)
-  .option(`-s, --size <size>`, `展示项目数量`, 6)
+  .option(`-n, --number <number>`, `展示项目数量`, 6)
   .option(`-a, --all [all]`, `展示所有项目`, false)
   .action((opts) => {
     const allData = getItemData();
@@ -141,7 +142,7 @@ cmd
       .sort((a, b) => {
         return (b.active || 0) - (a.active || 0);
       })
-      .slice(0, opts.all ? allData.length : opts.size)
+      .slice(0, opts.all ? allData.length : opts.number)
       .map((item, index) => {
         const indexStr = index >= 9 ? index + 1 : `0${index + 1}`;
         return `${indexStr} ${item.alias}[${item.active || 0}]: ${
@@ -153,7 +154,7 @@ cmd
       });
     console.log("* * ".repeat(5));
     console.log(
-      `当前项目总数：${allData.length}\n查看所有项目：-a \n指定展示数量：-s n`
+      `当前项目总数：${allData.length}\n查看所有项目：-a \n指定展示数量：-n n`
     );
   });
 
