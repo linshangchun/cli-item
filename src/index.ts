@@ -24,6 +24,7 @@ program
   .command('set <alias>')
   .description('添加或修改文件项目')
   .option(`-d, --description <description>`, '软链接描述')
+  .option('-f, --file <file>', '指定当前项目文件夹下的具体文件或文件夹作为项目path')
   .option(`-y, --yes [yes]`, `跳过提示`)
   .action(async (alias, opts) => {
     const res = await checkAlias(alias);
